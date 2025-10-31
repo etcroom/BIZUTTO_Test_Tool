@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: station_code
-          path: station_code.csv
+          path: station_code/station_code.csv
