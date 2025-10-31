@@ -3,7 +3,7 @@ name: StationCode
 on:
   schedule:
     # 定期実行する時間・・・①
-    - cron: '6 * * * *'
+    - cron: '7 * * * *'
 
   workflow_dispatch:
 
