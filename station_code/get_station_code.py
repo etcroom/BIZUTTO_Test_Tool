@@ -222,14 +222,15 @@ def main():
     with open(csv_file_path, 'rb') as file:
         # ファイルを読み取る
         fileData = file.read()
-        # sha256
-        hash_sha256 = hashlib.sha256(fileData).hexdigest()
-        print('file hash(sha256)  : ' + hash_sha256.upper())
+        # sha1
+        hash_sha1 = hashlib.sha1(fileData).hexdigest()
+        print('file hash(sha1)  : ' + hash_sha1.upper())
 
 
 if __name__ == '__main__':
 
     main()
+
 
 
 
