@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: station_code
+
 jobs:
   get-station-code:
     runs-on: ubuntu-latest
