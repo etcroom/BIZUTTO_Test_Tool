@@ -18,5 +18,7 @@ jobs:
           architecture: 'x64'
       - name: Install dependencies
         run: pip install beautifulsoup4
+      - name: Install dependencies
+        run: pip install requests
       - name: Run Python
         run: python station_code/get_station_code.py
