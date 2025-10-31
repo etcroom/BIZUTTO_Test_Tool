@@ -2,7 +2,7 @@ name: StationCode
 
 on:
   schedule:
-    - cron: '11 * * * *'
+    - cron: '0 15 * * *'
 
   #workflow_dispatch:
 
