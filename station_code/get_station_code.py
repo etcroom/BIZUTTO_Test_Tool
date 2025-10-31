@@ -190,7 +190,7 @@ def main():
 
     print("更新データがあります。スクレイピングを実行します")
     print("1: はい\r\n2: いいえ")
-    m = 2
+    m = 1
     if m == 2:
         print("処理を終了します")
         return
@@ -228,5 +228,6 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
