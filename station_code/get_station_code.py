@@ -17,7 +17,7 @@ import pathlib
 
 def get_last_update():
     base = pathlib.Path(os.getcwd())
-    json_file_path = base.joinpath("lastupdate.json")
+    json_file_path = base.joinpath("station_code", "lastupdate.json")
     json_open = codecs.open(json_file_path, 'r', 'utf-8')
     json_load = json.load(json_open)
 
@@ -228,3 +228,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
