@@ -89,6 +89,7 @@ def do_get_region_and_line():
                     number = re.findall(r'\d+', a_tags['href'])
                     # region と line のコードを配列に追加
                     ret_region_and_line_list.append(number)
+                    return ret_region_and_line_list
 
 
     return ret_region_and_line_list
@@ -228,6 +229,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
