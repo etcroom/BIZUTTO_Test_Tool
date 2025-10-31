@@ -26,3 +26,8 @@ jobs:
         run: pip install requests
       - name: Run Python
         run: python get_station_code.py
+      - name: Upload build result
+        uses: actions/upload-artifact@v3
+        with:
+          name: station_code
+          path: station_code.csv
