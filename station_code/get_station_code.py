@@ -38,7 +38,8 @@ def create_station_code_csv_file():
     tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
     dt = datetime.datetime.now(tokyo_tz)
 
-    filename = f'station_code_{str(dt.year)}{str(dt.month)}{str(dt.day)}{str(dt.hour)}{str(dt.minute)}{str(dt.second)}.csv'
+    #filename = f'station_code_{str(dt.year)}{str(dt.month)}{str(dt.day)}{str(dt.hour)}{str(dt.minute)}{str(dt.second)}.csv'
+    filename = f'station_code.csv'
 
     base = pathlib.Path(os.getcwd())
     file_path = base.joinpath(filename)
@@ -229,6 +230,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
