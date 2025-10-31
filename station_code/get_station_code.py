@@ -106,7 +106,7 @@ def do_scraping(region, line, csv_writer):
         print("HTTP STATUS : ", res.status_code, " --> ", status_codes._codes[res.status_code][0]  )
         return
 
-    time.sleep(1)  # 1秒間スリープ
+    # time.sleep(1)  # 1秒間スリープ
     # レスポンスの HTML から BeautifulSoup オブジェクトを作る
     soup = BeautifulSoup(res.text, 'html.parser')
 
@@ -230,6 +230,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
