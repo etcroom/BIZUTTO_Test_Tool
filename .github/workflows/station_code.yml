@@ -30,6 +30,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with: 
           commit_message: 更新日変更
+          file_pattern: '*.json'
       - name: Upload build result
         uses: actions/upload-artifact@v4
         with:
