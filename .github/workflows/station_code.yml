@@ -25,4 +25,4 @@ jobs:
       - name: Install dependencies
         run: pip install requests
       - name: Run Python
-        run: python station_code/get_station_code.py
+        run: python get_station_code.py
