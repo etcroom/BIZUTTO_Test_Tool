@@ -12,17 +12,22 @@ import pprint
 import time
 import codecs
 import hashlib
+import pathlib
 
 
 def get_last_update():
-    json_open = codecs.open(os.getcwd()+'\\lastupdate.json', 'r', 'utf-8')
+    base = pathlib.Path(os.getcwd())
+    json_file_path = base.joinpath("lastupdate.json")
+    json_open = codecs.open(json_file_path, 'r', 'utf-8')
     json_load = json.load(json_open)
 
     return json_load['lastupdate']
 
 
 def save_last_update(last_update):
-    with codecs.open(os.getcwd()+'\\lastupdate.json', 'w', 'utf-8') as json_open:
+    base = pathlib.Path(os.getcwd())
+    json_file_path = base.joinpath("lastupdate.json")
+    with codecs.open(json_file_path, 'w', 'utf-8') as json_open:
 
         create_data = {'lastupdate': last_update}
         json.dump(create_data, json_open, indent=4, ensure_ascii=False)
@@ -35,7 +40,8 @@ def create_station_code_csv_file():
 
     filename = f'station_code_{str(dt.year)}{str(dt.month)}{str(dt.day)}{str(dt.hour)}{str(dt.minute)}{str(dt.second)}.csv'
 
-    file_path = os.getcwd() + '\\'+ filename
+    base = pathlib.Path(os.getcwd())
+    file_path = base.joinpath(filename)
 
     return file_path
 
@@ -220,4 +226,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
