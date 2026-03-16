@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           architecture: 'x64'
@@ -32,7 +32,7 @@ jobs:
           commit_message: 更新日変更
           file_pattern: '*.json'
       - name: Upload build result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: station_code
           path: station_code/station_code.csv
